@@ -70,6 +70,10 @@ LeftGroupBox:AddToggle('MyToggle', {
 -- You index Toggles with the specified index, in this case it is 'MyToggle'
 -- To get the state of the toggle you do toggle.Value
 
+if not Toggles then
+    Toggles = {}
+end
+
 -- Calls the passed function when the toggle is updated
 Toggles.MyToggle:OnChanged(function()
     -- here we get our toggle object & then get its value
